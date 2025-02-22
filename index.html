@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Kue</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+</head>
+<body class="bg-pink-100">
+    <!-- css -->
+    <style>
+        @keyframes blob {
+          0% { transform: translate(0px, 0px) scale(1); }
+          33% { transform: translate(30px, -50px) scale(1.1); }
+          66% { transform: translate(-20px, 20px) scale(0.9); }
+          100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+          animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+          animation-delay: 4s;
+        }
+    </style>
+  
+    <!-- halaman navbar dan home -->
+    <div class="bg-pink-100 min-h-screen">
+        <nav class="fixed top-0 left-0 w-full bg-pink-100 shadow-md z-50 flex justify-between items-center py-6 px-6 lg:px-20">
+            <h1 class="text-3xl font-bold text-pink-600">MyCake's</h1>
+            <ul class="hidden md:flex space-x-6 text-pink-600 font-semibold">
+                <li><a href="#home" class="hover:text-pink-800">Home</a></li>
+                <li><a href="#about" class="hover:text-pink-800">About</a></li>
+                <li><a href="#menu" class="hover:text-pink-800">Menu</a></li>
+                <li><a href="#review" class="hover:text-pink-800">Review</a></li>
+                <li><a href="#info" class="hover:text-pink-800">Info</a></li>
+            </ul>
+            <a href="#contact" class="flex items-center space-x-2 text-pink-600 font-semibold">
+                <i class="ph-bold ph-phone"></i>
+                <span>Contact</span>
+            </a>
+        </nav>
+        
+        <!-- halaman home -->
+        <div id="home" class="container mx-auto px-6 lg:px-20 pt-32 flex flex-col lg:flex-row items-center justify-between">
+            <div class="text-center lg:text-left lg:w-1/2">
+                <h2 class="text-5xl font-extrabold text-pink-700">Homemade Cakes <br> Made with Love & Fun!</h2>
+                <p class="mt-4 text-lg text-gray-700">Nikmati kelezatan setiap gigitan dengan kue terbaik dari kami!</p>
+                <div class="mt-6 flex justify-center lg:justify-start space-x-4">
+                    <a href="#menu" 
+                        class="px-8 py-4 bg-gradient-to-r from-pink-400 to-pink-500 text-white font-bold rounded-full shadow-lg 
+                        hover:from-pink-500 hover:to-pink-600 hover:shadow-xl transform transition-all duration-300 hover:scale-105 flex items-center space-x-2">
+                        <span>🍰</span>
+                        <span>Menu</span>
+                    </a>
+                    
+                    <a href="#info" 
+                        class="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white font-bold rounded-full shadow-lg 
+                        hover:from-yellow-500 hover:to-yellow-600 hover:shadow-xl transform transition-all duration-300 hover:scale-105 flex items-center space-x-2">
+                        <span>📜</span>
+                        <span>Informasi</span>
+                    </a>
+                </div>
+                
+            </div>
+            <div class="mt-10 lg:mt-0 lg:w-1/2 flex justify-center">
+                <img src="assets/cake-home.png" alt="cake-home" class="w-80 lg:w-96 rounded-lg shadow-lg">
+            </div>
+        </div>
+    </div>
+
+    <!-- halaman about -->
+    <section id="about" class="relative bg-gradient-to-r from-pink-100 to-pink-200 pt-28 pb-20">
+        <div class="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center relative z-10">
+            <div class="lg:w-1/2 flex justify-center">
+                <img src="assets/about.png" alt="cake-about" 
+                    class="w-80 lg:w-96 rounded-3xl shadow-2xl transform hover:scale-105 transition duration-500">
+            </div>
+            <div class="lg:w-1/2 text-center lg:text-left mt-10 lg:mt-0">
+                <h2 class="text-5xl font-extrabold text-pink-700 leading-tight">
+                    🍰 About <span class="text-pink-500">MyCake's</span>
+                </h2>
+                <p class="mt-6 text-lg text-gray-700 leading-relaxed">
+                    <span class="font-semibold text-pink-600">MyCake's</span> Hadir sejak 2020, <span class="font-semibold text-pink-600">MyCake's</span> menyediakan berbagai macam kue dan cookies premium dengan rasa yang pas dan lezat di setiap gigitannya. Kami berkomitmen untuk menghadirkan kualitas terbaik, menggunakan bahan pilihan untuk menciptakan kelezatan yang tak terlupakan.
+                    <div class="mt-8 flex justify-center lg:justify-start">
+                        <a href="https://www.google.com/maps?q=Kota+Bandung,Antapani+tengah,Jl.+Amethyst+Estate+No.1" 
+                            target="_blank" rel="noopener noreferrer"
+                            class="flex items-center space-x-2 px-6 py-3 bg-pink-500 text-white font-semibold 
+                            rounded-full shadow-lg hover:bg-pink-600 transition duration-300 transform hover:scale-105">
+                            <i class="ph-bold ph-map-pin text-xl"></i>
+                            <span>Our Location</span>
+                        </a>
+                    </div>                    
+            </div>
+        </div>
+        <div class="absolute top-10 left-10 w-20 h-20 bg-white opacity-40 rounded-full blur-xl"></div>
+        <div class="absolute bottom-10 right-10 w-32 h-32 bg-pink-300 opacity-30 rounded-full blur-2xl"></div>
+    </section>
+    
+    <!-- halaman menu -->
+    <section id="menu" class="py-20 min-h-screen bg-gradient-to-br from-pink-50 via-rose-50 to-purple-50">      
+        <div class="container mx-auto px-4 max-w-6xl">
+          <div class="text-center mb-16 relative">
+            <h2 class="text-5xl md:text-6xl font-bold text-pink-600 relative inline-block">
+              Menu MyCake's
+              <span class="absolute -top-6 -right-6 text-4xl animate-bounce">🧁</span>
+            </h2>
+          </div>
+      
+          <div class="swiper menuSwiper">
+            <div class="swiper-wrapper pb-12">
+                
+              <!-- Bento Cake Square -->
+              <div class="swiper-slide px-2">
+                <div class="group">
+                  <div class="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-pink-100">
+                    <div class="absolute top-0 left-0 w-12 h-12 bg-pink-100 rounded-br-3xl"></div>
+                    <div class="absolute top-0 right-0 w-12 h-12 bg-pink-100 rounded-bl-3xl"></div>
+                    
+                    <div class="p-6">
+                      <div class="relative mb-6">
+                        <img src="assets/bento-cake.png" alt="Bento Cake" class="w-48 h-48 object-cover mx-auto rounded-2xl shadow-md transform group-hover:scale-105 transition-transform duration-300" />
+                        <span class="absolute -top-2 -right-2 bg-pink-500 text-white text-sm px-3 py-1 rounded-full">Favorite! ⭐</span>
+                      </div>
+                      <h3 class="text-2xl font-bold text-pink-600 mb-2">Bento Cake Kotak</h3>
+                      <p class="text-gray-600 text-sm mb-4">Soft & fluffy cake with dreamy buttercream! 🎂</p>
+                      <div class="flex items-center justify-between">
+                        <p class="text-2xl font-bold text-pink-500">Rp 30.000</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Cookies -->
+              <div class="swiper-slide px-2">
+                <div class="group">
+                  <div class="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-pink-100">
+                    <div class="absolute top-0 left-0 w-12 h-12 bg-pink-100 rounded-br-3xl"></div>
+                    <div class="absolute top-0 right-0 w-12 h-12 bg-pink-100 rounded-bl-3xl"></div>
+                    
+                    <div class="p-6">
+                      <div class="relative mb-6">
+                        <img src="assets/cookies.png" alt="Cookies" class="w-48 h-48 object-cover mx-auto rounded-2xl shadow-md transform group-hover:scale-105 transition-transform duration-300" />
+                      </div>
+                      <h3 class="text-2xl font-bold text-pink-600 mb-2">Cookies</h3>
+                      <p class="text-gray-600 text-sm mb-4">Yummy cookies in various flavors! 🍪</p>
+                      <div class="flex items-center justify-between">
+                        <p class="text-2xl font-bold text-pink-500">Rp 6.000</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Cup Custom Cake -->
+              <div class="swiper-slide px-2">
+                <div class="group">
+                  <div class="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-pink-100">
+                    <div class="absolute top-0 left-0 w-12 h-12 bg-pink-100 rounded-br-3xl"></div>
+                    <div class="absolute top-0 right-0 w-12 h-12 bg-pink-100 rounded-bl-3xl"></div>
+                    
+                    <div class="p-6">
+                      <div class="relative mb-6">
+                        <img src="assets/cup.png" alt="Cup Cake" class="w-48 h-48 object-cover mx-auto rounded-2xl shadow-md transform group-hover:scale-105 transition-transform duration-300" />
+                        <span class="absolute -top-2 -right-2 bg-pink-500 text-white text-sm px-3 py-1 rounded-full">New! ✨</span>
+                      </div>
+                      <h3 class="text-2xl font-bold text-pink-600 mb-2">Cup Custom Cake</h3>
+                      <p class="text-gray-600 text-sm mb-4">Adorable mini cakes just for you! 🧁</p>
+                      <div class="flex items-center justify-between">
+                        <p class="text-2xl font-bold text-pink-500">Rp 15.000</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Round Bento Cake -->
+              <div class="swiper-slide px-2">
+                <div class="group">
+                  <div class="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-pink-100">
+                    <div class="absolute top-0 left-0 w-12 h-12 bg-pink-100 rounded-br-3xl"></div>
+                    <div class="absolute top-0 right-0 w-12 h-12 bg-pink-100 rounded-bl-3xl"></div>
+                    
+                    <div class="p-6">
+                      <div class="relative mb-6">
+                        <img src="assets/cake2.png" alt="Round Cake" class="w-48 h-48 object-cover mx-auto rounded-2xl shadow-md transform group-hover:scale-105 transition-transform duration-300" />
+                        <span class="absolute -top-2 -right-2 bg-pink-500 text-white text-sm px-3 py-1 rounded-full">Special! 💖</span>
+                      </div>
+                      <h3 class="text-2xl font-bold text-pink-600 mb-2">Bento Cake Bulat</h3>
+                      <p class="text-gray-600 text-sm mb-4">Perfect round cake with lovely decorations!</p>
+                      <div class="flex items-center justify-between">
+                        <p class="text-2xl font-bold text-pink-500">Rp 40.000</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Add Navigation -->
+            <div class="swiper-menu"></div>
+            <div class="swiper-button-next text-pink-500"></div>
+            <div class="swiper-button-prev text-pink-500"></div>
+          </div>
+        </div>
+      </section>
+
+    <!-- halaman review -->
+    <section id="review" class="py-20 bg-gradient-to-r from-pink-50 to-pink-100">
+        <div class="container mx-auto px-6"><br>
+            <h2 class="text-4xl font-extrabold text-center text-pink-700 drop-shadow-md">✨ Review Pelanggan ✨</h2>
+            <p class="text-center text-gray-600 mt-3 text-lg">Lihat apa kata mereka tentang MyCake's!</p>
+
+            <!-- Swiper container -->
+            <div class="swiper reviewSwiper mt-12">
+                <div class="swiper-wrapper">
+
+                    <!-- Review 1 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white bg-opacity-40 backdrop-blur-lg p-6 rounded-3xl shadow-lg border border-white/30 text-center transition-all duration-300 transform hover:scale-105">
+                            <img src="assets/review1.jpeg" alt="Review 1" class="w-60 mx-auto rounded-xl shadow-md">
+                            <h3 class="text-xl font-bold text-pink-700 mt-4">⭐ ⭐ ⭐ ⭐ ⭐</h3>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white bg-opacity-40 backdrop-blur-lg p-6 rounded-3xl shadow-lg border border-white/30 text-center transition-all duration-300 transform hover:scale-105">
+                            <img src="assets/review2.jpeg" alt="Review 2" class="w-60 mx-auto rounded-xl shadow-md">
+                            <h3 class="text-xl font-bold text-pink-700 mt-4">⭐ ⭐ ⭐ ⭐ ⭐</h3>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white bg-opacity-40 backdrop-blur-lg p-6 rounded-3xl shadow-lg border border-white/30 text-center transition-all duration-300 transform hover:scale-105">
+                            <img src="assets/review3.jpeg" alt="Review 3" class="w-60 mx-auto rounded-xl shadow-md">
+                            <h3 class="text-xl font-bold text-pink-700 mt-4">⭐ ⭐ ⭐ ⭐ ⭐</h3>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white bg-opacity-40 backdrop-blur-lg p-6 rounded-3xl shadow-lg border border-white/30 text-center transition-all duration-300 transform hover:scale-105">
+                            <img src="assets/review4.jpeg" alt="Review 4" class="w-60 mx-auto rounded-xl shadow-md">
+                            <h3 class="text-xl font-bold text-pink-700 mt-4">⭐ ⭐ ⭐ ⭐ ⭐</h3>
+                        </div>
+                    </div>
+
+                    <!-- Review 5 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white bg-opacity-40 backdrop-blur-lg p-6 rounded-3xl shadow-lg border border-white/30 text-center transition-all duration-300 transform hover:scale-105">
+                            <img src="assets/review5.jpeg" alt="Review 5" class="w-60 mx-auto rounded-xl shadow-md">
+                            <h3 class="text-xl font-bold text-pink-700 mt-4">⭐ ⭐ ⭐ ⭐ ⭐</h3>
+                        </div>
+                    </div>
+
+                    <!-- Review 6 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white bg-opacity-40 backdrop-blur-lg p-6 rounded-3xl shadow-lg border border-white/30 text-center transition-all duration-300 transform hover:scale-106">
+                            <img src="assets/review6.jpeg" alt="Review 6" class="w-60 mx-auto rounded-xl shadow-md">
+                            <h3 class="text-xl font-bold text-pink-700 mt-4">⭐ ⭐ ⭐ ⭐ ⭐</h3>
+                        </div>
+                    </div> 
+
+                    <!-- Review 7 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white bg-opacity-40 backdrop-blur-lg p-6 rounded-3xl shadow-lg border border-white/30 text-center transition-all duration-300 transform hover:scale-106">
+                            <img src="assets/review7.jpeg" alt="Review 7" class="w-60 mx-auto rounded-xl shadow-md">
+                            <h3 class="text-xl font-bold text-pink-700 mt-4">⭐ ⭐ ⭐ ⭐ ⭐</h3>
+                        </div>
+                    </div> 
+
+                    <!-- Review 8 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white bg-opacity-40 backdrop-blur-lg p-6 rounded-3xl shadow-lg border border-white/30 text-center transition-all duration-300 transform hover:scale-106">
+                            <img src="assets/review8.jpeg" alt="Review 8" class="w-60 mx-auto rounded-xl shadow-md">
+                            <h3 class="text-xl font-bold text-pink-700 mt-4">⭐ ⭐ ⭐ ⭐ ⭐</h3>
+                        </div>
+                    </div> 
+                </div>
+
+                <!-- Swiper Pagination -->
+                <div class="swiper-review"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- halaman kontak -->
+    <section id="contact" class="relative py-24 overflow-hidden bg-gradient-to-br from-pink-50 via-rose-50 to-purple-50">
+        <!-- Decorative Elements -->
+        <div class="absolute inset-0 pointer-events-none">
+          <div class="absolute top-0 left-0 w-64 h-64 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+          <div class="absolute top-0 right-0 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div class="absolute bottom-0 left-1/2 w-64 h-64 bg-rose-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+        </div>
+      
+        <div class="container mx-auto px-4 relative">
+          <!-- Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Hubungi Kami</h2>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">Pilih platform favoritmu untuk menghubungi kami. Kami siap melayani pesananmu!</p>
+          </div>
+      
+          <!-- Contact Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            
+            <!-- WhatsApp Card -->
+            <a href="https://wa.me/62895389949498" target="_blank" 
+              class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+              <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                  <i class="ph ph-whatsapp text-2xl text-white"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-800 group-hover:text-green-500 transition-colors">WhatsApp</h3>
+                  <p class="text-gray-500 text-sm mt-1">Chat with us</p>
+                </div>
+              </div>
+            </a>
+      
+            <!-- Instagram Card -->
+            <a href="https://instagram.com/mycakes.25" target="_blank"
+              class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+              <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center">
+                  <i class="ph ph-instagram-logo text-2xl text-white"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-800 group-hover:text-pink-500 transition-colors">Instagram</h3>
+                  <p class="text-gray-500 text-sm mt-1">Follow our stories</p>
+                </div>
+              </div>
+            </a>
+      
+            <!-- TikTok Card -->
+            <a href="https://tiktok.com/@mycakes.acc" target="_blank"
+              class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+              <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center">
+                  <i class="ph ph-tiktok-logo text-2xl text-white"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-800 group-hover:text-black transition-colors">TikTok</h3>
+                  <p class="text-gray-500 text-sm mt-1">Watch our videos</p>
+                </div>
+              </div>
+            </a>
+      
+            <!-- Email Card -->
+            <a href="mailto:mycakes2506@gmail.com"
+              class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+              <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                  <i class="ph ph-envelope text-2xl text-white"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-800 group-hover:text-blue-500 transition-colors">Email</h3>
+                  <p class="text-gray-500 text-sm mt-1">Send us a message</p>
+                </div>
+              </div>
+            </a>
+      
+            <!-- Shopee Card -->
+            <a href="https://id.shp.ee/bfoxk2N" target="_blank"
+              class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+              <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
+                  <i class="ph ph-shopping-cart text-2xl text-white"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-800 group-hover:text-orange-500 transition-colors">Shopee</h3>
+                  <p class="text-gray-500 text-sm mt-1">Shop our products</p>
+                </div>
+              </div>
+            </a>
+          </div>
+      </section>
+
+    <!-- info -->
+    <section id="info" class="py-20 bg-gradient-to-r from-pink-50 to-pink-100">
+        <div class="container mx-auto px-6"><br>
+            <h2 class="text-4xl font-extrabold text-center text-pink-700 drop-shadow-md">📦 Informasi Pemesanan</h2>
+            <p class="text-center text-gray-600 mt-3 text-lg">Pesan kue favoritmu dengan mudah!</p>
+    
+            <!-- Langkah-langkah Pemesanan -->
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Langkah 1 -->
+                <div class="flex flex-col items-center p-6 bg-white shadow-xl rounded-xl hover:scale-105 transition duration-300">
+                    <i class="ph-bold ph-clock text-5xl text-pink-500"></i>
+                    <h3 class="text-xl font-bold text-pink-700 mt-4">1. Jam Operasional</h3>
+                    <p class="text-gray-600 text-center mt-2">Mulai buka jam 08.00 - 18.00 WIB. Pengiriman dan pemesanan bisa dilakukan pada jam berikut. Open Pre-order minimal H-1 sebelum dikirim.</p>
+                    <p class="text-gray-600 text-center mt-2"></p>
+                </div>
+    
+                <!-- Langkah 2 -->
+                <div class="flex flex-col items-center p-6 bg-white shadow-xl rounded-xl hover:scale-105 transition duration-300">
+                    <i class="ph-bold ph-chat text-5xl text-pink-500"></i>
+                    <h3 class="text-xl font-bold text-pink-700 mt-4">2. Cara pemesanan</h3>
+                    <p class="text-gray-600 text-center mt-2">Pemesanan agar lebih mudah bisa pesan melalui shopee yang dapat dikirim langsung oleh kurir. Atau dapat melakukan pengambilan langsung ke rumah saya, di <b> Kota Bandung, Antapani tengah, jl.Amethyst Estate</b>. Bisa langsung hubungi kontak yang ada pada halaman kontak</p>
+                </div>
+    
+                <!-- Langkah 3 -->
+                <div class="flex flex-col items-center p-6 bg-white shadow-xl rounded-xl hover:scale-105 transition duration-300">
+                    <i class="ph-bold ph-truck text-5xl text-pink-500"></i>
+                    <h3 class="text-xl font-bold text-pink-700 mt-4">3. Bento Cake</h3>
+                    <p class="text-gray-600 text-center mt-2">Khusus untuk pemesanan bento cake jenis apapun hanya dapat melakukan pengiriman di sekitar Bandung, dan tidak dapat melakukan pengiriman keluar Bandung. Design cake (tulisan dan gambar) bisa custom sesuai request.</p>
+                </div>
+            </div>
+    
+            <!-- Tombol Pesan Sekarang -->
+            <div class="flex justify-center mt-12">
+                <a href="https://id.shp.ee/bfoxk2N" target="_blank"
+                    class="flex items-center bg-gradient-to-r from-green-400 to-green-600 text-white px-10 py-5 rounded-full shadow-xl space-x-4 
+                    hover:from-green-500 hover:to-green-700 hover:shadow-2xl transform transition-all duration-300 hover:scale-105 relative">
+                    <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full animate-bounce">
+                        👍
+                    </span>
+                    <i class="ph-bold ph-shopping-cart text-3xl animate-pulse"></i>
+                    <span class="text-lg font-bold">Pesan Sekarang</span>
+                </a>
+            </div>            
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-pink-500 text-white text-center p-4 mt-8">
+        &copy; 2025 MyCake's - by Helen.A.Y . All Rights Reserved.
+    </footer>
+
+    <script>
+    // Swiper untuk review
+    var reviewSwiper = new Swiper('.reviewSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 3000, 
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-review',
+            clickable: true,
+        },
+    });
+        // Swiper untuk menu
+        var menuSwiper = new Swiper('.menuSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+        }
+    });
+    </script>
+
+</body>
+</html>
+
